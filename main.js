@@ -16,6 +16,13 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(express.static(path.join(__dirname, 'public')))
 // stuff above are all setup type things
 
+var client = new google({
+  key: process.env.API_KEY
+});
+
+// here we add client requests
+client.get()
+
 app.get('/',routes.getIndex);
 
 
