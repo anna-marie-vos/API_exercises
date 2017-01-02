@@ -20,8 +20,15 @@ var client = new google({
   key: process.env.API_KEY
 });
 
+var parameters = {}
+
 // here we add client requests
-client.get()
+client.get('search',parameters,function(error, xxx,response){
+  if(error){
+    console.log(error)
+  }
+  
+} )
 
 app.get('/',routes.getIndex);
 
