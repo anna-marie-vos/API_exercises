@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', start);
 
 function start(){
   var address = 'Wellington, NZ';
-  console.log(document.getElementById('map'))
+  // console.log(document.getElementById('map'))
   var map = new google.maps.Map(document.getElementById('map'), {
       mapTypeId: google.maps.MapTypeId.TERRAIN,
       zoom: 6
