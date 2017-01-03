@@ -2,7 +2,10 @@ var db = require('./db')
 
 
 function getIndex (req, res) {
-    res.render('index')
+  var data = {
+    url:'http://maps.google.com/maps/api/js?sensor=false'
+  }
+    res.render('index',data)
 }
 
 
