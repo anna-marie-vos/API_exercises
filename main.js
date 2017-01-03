@@ -9,7 +9,9 @@ var env = require('dotenv').config()
 
 
 // view engine setup
-app.engine('handlebars', expresshbs({defaultLayout: 'main'})) // makes the main page html file work.
+app.engine('handlebars', expresshbs({
+  defaultLayout: 'main'
+})) // makes the main page html file work.
 app.set('view engine', 'handlebars') //causes the render function to work
 
 app.use(bodyParser.json())
@@ -19,9 +21,7 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 
 // here we add client requests
-
-
 app.get('/',routes.getIndex);
-
+app.post('/',routes.displaygoogleMap);
 
 module.exports = app
